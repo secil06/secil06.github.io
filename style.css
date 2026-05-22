@@ -1,0 +1,62 @@
+/* Genel Sayfa Düzeni */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* İçerik Konteyneri */
+.container {
+    text-align: center;
+}
+
+/* Şık Buton Tasarımı */
+#GosterButonu {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Butona fareyle yaklaşınca olacak efekt */
+#GosterButonu:hover {
+    background-color: #ff4747;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Fotoğraf Alanının Başlangıç Durumu (Gizli ve Küçültülmüş) */
+#FotografKutusu {
+    margin-top: 30px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.5s ease; /* Açılış animasyonu süresi */
+    pointer-events: none; /* Gizliyken tıklanamasın */
+}
+
+/* Fotoğrafın Kendisi */
+#ProfilFotosu {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Fotoğrafı yuvarlak yapar */
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Butona basıldığında CSS bu sınıfı devreye sokacak ve fotoğraf görünecek */
+#FotografKutusu.aktif {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
