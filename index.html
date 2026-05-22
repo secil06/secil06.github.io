@@ -4,31 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seçil'in Web Sitesi</title>
-    <!-- CSS dosyamızı bağlıyoruz -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <!-- Tıklanacak Buton -->
-        <button id="GosterButonu">Merhaba ben Seçil</button>
-
-        <!-- Gizli Fotoğraf Alanı -->
-        <div id="FotografKutusu" class="gizli">
-            <img src="secil.jpg" alt="Seçil'in Fotoğrafı" id="ProfilFotosu">
+        <div class="card">
+            <h1>Merhaba, Ben Seçil! ✨</h1>
+            <p>Web geliştirme dünyasına ilk adımımı attım. Kendi web sitemi tasarlıyor ve kodluyorum!</p>
+            
+            <button id="GosterButonu">Beni Gör 🚀</button>
+            
+            <div id="FotografKutusu" class="gizli">
+                <img src="fotografim.jpeg" alt="Seçil'in Fotoğrafı" id="ProfilFotosu">
+            </div>
         </div>
     </div>
 
-    <!-- Fotoğrafı açıp kapatacak küçük JavaScript kodu -->
     <script>
         const buton = document.getElementById('GosterButonu');
         const fotoKutusu = document.getElementById('FotografKutusu');
 
         buton.addEventListener('click', function() {
-            // Butona her tıklandığında 'aktif' klasını ekler veya kaldırır
             fotoKutusu.classList.toggle('aktif');
+            if(fotoKutusu.classList.contains('aktif')) {
+                buton.textContent = 'Beni Gizle 🙈';
+            } else {
+                buton.textContent = 'Beni Gör 🚀';
+            }
         });
     </script>
-
 </body>
 </html>
