@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seçil'in Web Sitesi</title>
+    <!-- CSS dosyamızı bağlıyoruz -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Tıklanacak Buton -->
+        <button id="GosterButonu">Merhaba ben Seçil</button>
+
+        <!-- Gizli Fotoğraf Alanı -->
+        <div id="FotografKutusu" class="gizli">
+            <img src="secil.jpg" alt="Seçil'in Fotoğrafı" id="ProfilFotosu">
+        </div>
+    </div>
+
+    <!-- Fotoğrafı açıp kapatacak küçük JavaScript kodu -->
+    <script>
+        const buton = document.getElementById('GosterButonu');
+        const fotoKutusu = document.getElementById('FotografKutusu');
+
+        buton.addEventListener('click', function() {
+            // Butona her tıklandığında 'aktif' klasını ekler veya kaldırır
+            fotoKutusu.classList.toggle('aktif');
+        });
+    </script>
+
+</body>
+</html>
